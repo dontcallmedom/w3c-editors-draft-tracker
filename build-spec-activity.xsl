@@ -16,7 +16,7 @@
   <xsl:variable name="max" select="max(for $i in $months return count($commits//logentry[starts-with(date, substring(xs:string($i),1,7))]))"/>
   <xsl:variable name="height" select="max(($max,20)) + 20"/>
   <xsl:variable name="lastYearMonths" select="count(for $i in $months return if (year-from-date($i) &lt; year-from-date($end-month)) then $i else nil)"/>
-  <svg xmlns="http://www.w3.org/2000/svg" width="{10*count($months)}" height="{$height + 15}">
+  <svg xmlns="http://www.w3.org/2000/svg" width="{10*count($months)}" height="{$height + 30}">
     <style type="text/css">text { font-size:10px; text-anchor:middle;}
     line { stroke: #AAF; stroke-width:5px; }
     text.past { fill:#FFF;}
@@ -39,7 +39,7 @@
     </xsl:for-each>
     <text x="{5*$lastYearMonths}" y="{$height + 12}" class="past"><xsl:value-of select="year-from-date($end-month) - 1"/></text>
     <text x="{10*$lastYearMonths + 5*(12 - $lastYearMonths)}" y="{$height + 12}"><xsl:value-of select="year-from-date($end-month)"/></text>
-
+    <text x="{10*count($months) div 2}" y="{$height + 24}">Commits on ed. draft</text>
   </svg>
 </xsl:template>
 
