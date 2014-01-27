@@ -6,6 +6,7 @@ import json
 import subprocess
 import os
 import sys
+import re
 
 def writable_dir(string):
     if not os.path.isdir(string):
@@ -15,6 +16,12 @@ def writable_dir(string):
     if string[-1]=="/":
         string = string[:-1]
     return string
+
+def url(string):
+    if string[:7] == "http://" or string[:8] == "https://":
+        return string
+    else:
+        raise argparse.ArgumentTypeError("%s not an URL")  %string
 
 def json_file(string):
     try:
@@ -29,18 +36,19 @@ def json_file(string):
 
 import argparse
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("path", metavar="<path>", type=writable_dir, help="Path of the directory where the checkout will be made")
-parser.add_argument("filter", metavar="name", default=None, help="Fetch data gathering for the spec matched by the said name (see list); use 'all' to fetch for all the specs") 
+group = parser.add_mutually_exclusive_group()
+parser.add_argument("path", metavar="<output_directory>", type=writable_dir, help="Path of the directory where the checkout will be made")
 parser.add_argument("--map","-m", dest="map", default="map-url-to-vcs.json", type=json_file, help="Path of the JSON file mapping editor drafts URL to version control systems")
-parser.add_argument("--list","-l", dest="list", default="editor-drafts", type=argparse.FileType('r'), help="Path of the text file listing |-separated URLs of editors drafts and their shortnames")
+group.add_argument("--list", metavar="<uri list>",dest="list", default=None, type=argparse.FileType('r'), help="Path of the text file listing URLs of editors drafts (one per line)")
+group.add_argument("--url", metavar="<url>", dest="filter", type=url, help="URL of the editors draft on which to collected data")
 
 args = parser.parse_args()
-urisFile = args.list
+if args.list:
+    urisFile = args.list
+else:
+    urisFile = [args.filter]
 vcsData = args.map
 checkout_dir = args.path
-filter = args.filter
-if filter=="all":
-    filter = None
 
 # from http://stackoverflow.com/questions/431684/how-do-i-cd-in-python
 class cd:
@@ -55,12 +63,12 @@ class cd:
     def __exit__(self, etype, value, traceback):
         os.chdir(self.savedPath)
 
+uri_cleaner = re.compile(r"[^a-z0-9]")
 
-for l in urisFile:
+for l in urisFile:    
     found = False 
-    uri,name = l.strip().split("|")
-    if filter!=None and filter!=name:
-        continue
+    uri = l.strip()
+    name = uri_cleaner.sub("", "".join(uri.split(":")[1:]))
     res = open("data/%s.xml" % name,"w")
     for uriprefix,rule in vcsData.iteritems():
         if uri.startswith(uriprefix):
