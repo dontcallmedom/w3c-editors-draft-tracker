@@ -22,6 +22,8 @@
     text.past { fill:#FFF;}
     </style>
     <title>Editing activity for <xsl:value-of select="$spec-title"/></title>
+    <xsl:variable name="lastupdatemonth" select="number(substring(xs:string(/log/logentry[1]/date),6,2))"/>
+    <desc>Last updated <xsl:value-of select="$monthNames[$lastupdatemonth]"/><xsl:text> </xsl:text><xsl:value-of select="substring(/log/logentry[1]/date/text(),1,4)"/></desc>
     <rect x="0" y="{$height - 9}" width="{10*$lastYearMonths + 1}" height="25" fill="#999"/>
     <xsl:for-each select="$months">
       <xsl:variable name="month" select="$monthNames[month-from-date(current())]"/>
