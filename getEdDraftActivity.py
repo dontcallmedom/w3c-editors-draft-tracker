@@ -30,7 +30,7 @@ def json_file(string):
 import argparse
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("path", metavar="<path>", type=writable_dir, help="Path of the directory where the checkout will be made")
-parser.add_argument("filter", metavar="name", default=None, help="Restrict data gathering to the spec matched by the said name (see list)")
+parser.add_argument("filter", metavar="name", default=None, help="Fetch data gathering for the spec matched by the said name (see list); use 'all' to fetch for all the specs") 
 parser.add_argument("--map","-m", dest="map", default="map-url-to-vcs.json", type=json_file, help="Path of the JSON file mapping editor drafts URL to version control systems")
 parser.add_argument("--list","-l", dest="list", default="editor-drafts", type=argparse.FileType('r'), help="Path of the text file listing |-separated URLs of editors drafts and their shortnames")
 
@@ -39,7 +39,8 @@ urisFile = args.list
 vcsData = args.map
 checkout_dir = args.path
 filter = args.filter
-
+if filter=="all":
+    filter = None
 
 # from http://stackoverflow.com/questions/431684/how-do-i-cd-in-python
 class cd:
@@ -58,9 +59,9 @@ class cd:
 for l in urisFile:
     found = False 
     uri,name = l.strip().split("|")
-    res = open("data/%s.xml" % name,"w")
     if filter!=None and filter!=name:
         continue
+    res = open("data/%s.xml" % name,"w")
     for uriprefix,rule in vcsData.iteritems():
         if uri.startswith(uriprefix):
             found = True
