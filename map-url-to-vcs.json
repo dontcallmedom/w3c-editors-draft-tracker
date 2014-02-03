@@ -18,9 +18,10 @@
  "http://www.w3.org/2012/webcrypto/WebCryptoAPI/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/webcrypto-api","path":"spec/Overview-WebCryptoAPI.xml"},
  "http://www.w3.org/2012/sysapps":{"vcs":"git","server":"https://github.com/sysapps","file":"index.html","branch":"gh-pages"},
  "https://github.com/slightlyoff/ServiceWorker/blob/master/spec/service_worker/index.html":{"vcs":"git","clone":"https://github.com/slightlyoff/ServiceWorker","branch":"master","path":"service_worker.ts"},
+ "http://w3c.github.io/filesystem-api/Overview.html":{"vcs":"git","clone":"https://github.com/w3c/filesystem-api","branch":"gh-pages","path":"Overview.html"},
  "http://www.w3.org/2008/webapps/manifest/":{"vcs":"git","clone":"https://github.com/w3c/manifest","path":"index.html","branch":"gh-pages"},
  "http://tabatkins.github.io/specs/respimg/Overview.html":{"vcs":"git","clone":"https://github.com/tabatkins/specs","path":"respimg/Overview.html","branch":"gh-pages"},
  "http://w3c.github.io/nfc/proposals/common/nfc.html":{"vcs":"git","clone":"https://github.com/w3c/nfc","path":"proposals/common/nfc.html","branch":"gh-pages"},
- "http://webaudio.github.io/web-audio-api/":{"vcs":"git","clone":"https://github.com/WebAudio/web-audio-api.git","path":"index.html","branch":"gh-pages"}
+ "http://webaudio.github.io/web-audio-api/":{"vcs":"git","clone":"https://github.com/WebAudio/web-audio-api","path":"index.html","branch":"gh-pages"}
 
 }
