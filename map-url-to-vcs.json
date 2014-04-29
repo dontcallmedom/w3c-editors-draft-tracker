@@ -23,6 +23,7 @@
  "http://www.w3.org/2008/webapps/manifest/":{"vcs":"git","clone":"https://github.com/w3c/manifest","path":"index.html","branch":"gh-pages"},
  "http://tabatkins.github.io/specs/respimg/Overview.html":{"vcs":"git","clone":"https://github.com/tabatkins/specs","path":"respimg/Overview.html","branch":"gh-pages"},
  "http://w3c.github.io/nfc/proposals/common/nfc.html":{"vcs":"git","clone":"https://github.com/w3c/nfc","path":"proposals/common/nfc.html","branch":"gh-pages"},
- "http://webaudio.github.io/web-audio-api/":{"vcs":"git","clone":"https://github.com/WebAudio/web-audio-api","path":"index.html","branch":"gh-pages"}
+ "http://webaudio.github.io/web-audio-api/":{"vcs":"git","clone":"https://github.com/WebAudio/web-audio-api","path":"index.html","branch":"gh-pages"},
+ "http://w3c.github.io/webappsec/specs/subresourceintegrity/":{"vcs":"git","clone":"https://github.com/w3c/webappsec.git","path":"specs/subresourceintegrity/spec.markdown","branch":"gh-pages"}
 
 }
