@@ -65,8 +65,8 @@ class cd:
 
 uri_cleaner = re.compile(r"[^a-z0-9]")
 
-for l in urisFile:    
-    found = False 
+for l in urisFile:
+    found = False
     uri = l.strip()
     name = uri_cleaner.sub("", "".join(uri.split(":")[1:]))
     res = open("data/%s.xml" % name,"w")
@@ -80,7 +80,10 @@ for l in urisFile:
                 if not os.path.isdir(dir_name):
                     os.mkdir(dir_name)
                 with cd(dir_name):
-                    path = uri.replace(uriprefix,"").split("#")[0]
+                    if rule.has_key("path"):
+                        path = rule["path"]
+                    else:
+                        path = uri.replace(uriprefix,"").split("#")[0]
                     subprocess.call(["cvs","-d","%s:%s" %(rule["server"],rule["root"]),"-Q","co",path], stderr=None)
                     if path[0:path.rfind('/') + 1]==path:
                         path = path + "Overview.html"
@@ -88,7 +91,7 @@ for l in urisFile:
                     for line in cvslog.split("\n"):
                         if line.startswith("date: "):
                             res.write("<logentry><date>%s</date></logentry>" % line.split(" ")[1])
-                res.write("</log>")                                          
+                res.write("</log>")
             elif rule["vcs"]=="hg":
                 cloneurl = None
                 if rule.has_key("path"):
@@ -103,7 +106,7 @@ for l in urisFile:
                     repo = cloneurl[cloneurl.rfind("/"):]
                 elif rule.has_key("server"):
                     repo = path[0:path.find("/",1)]
-                    cloneurl = rule["server"] + repo 
+                    cloneurl = rule["server"] + repo
                     path = path[len(repo) + 1:]
                 print "Cloning repo %s from %s for %s" % (repo, cloneurl, path)
                 if cloneurl == None:
@@ -135,7 +138,7 @@ for l in urisFile:
                     repo = cloneurl[cloneurl.rfind("/"):]
                 elif rule.has_key("server"):
                     repo = path[0:path.find("/",1)]
-                    cloneurl = rule["server"] + repo 
+                    cloneurl = rule["server"] + repo
                     path = path[len(repo) + 1:]
                 if rule.has_key("file") and (len(path) == 0 or path[-1]=="/"):
                     path = path + rule["file"]

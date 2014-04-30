@@ -27,5 +27,5 @@
  "http://w3c.github.io/nfc/proposals/common/nfc.html":{"vcs":"git","clone":"https://github.com/w3c/nfc","path":"proposals/common/nfc.html","branch":"gh-pages"},
  "http://webaudio.github.io/web-audio-api/":{"vcs":"git","clone":"https://github.com/WebAudio/web-audio-api","path":"index.html","branch":"gh-pages"},
  "http://w3c.github.io/webappsec/specs/subresourceintegrity/":{"vcs":"git","clone":"https://github.com/w3c/webappsec","path":"specs/subresourceintegrity/spec.markdown","branch":"gh-pages"},
- "http://www.w3.org/Fonts/WG/WOFF2/" : {"vcs":"cvs","server":"dev.w3.org","root":"/sources/public","path":"webfonts/WOFF2/spec/Overview.html"},
+ "http://www.w3.org/Fonts/WG/WOFF2/" : {"vcs":"cvs","server":"dev.w3.org","root":"/sources/public","path":"webfonts/WOFF2/spec/Overview.html"}
 }
