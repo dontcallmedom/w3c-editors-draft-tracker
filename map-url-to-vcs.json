@@ -2,7 +2,9 @@
  "http://dev.w3.org/fxtf/web-animations/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/FXTF","path":"web-animations/index.html"},
  "http://dev.w3.org/2011/webrtc/editor/": {"vcs":"git","clone":"https://github.com/fluffy/webrtc-w3c"},
  "http://dev.w3.org/csswg/mediaqueries4/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/csswg","path":"mediaqueries/Overview.src.html"},
- "http://dev.w3.org/csswg/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/csswg","file":"Overview.src.html"}, 
+ "http://dev.w3.org/csswg/css-font-loading/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/csswg","path":"css-font-loading/Overview.bs"},
+ "http://dev.w3.org/csswg/css-will-change/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/csswg","path":"css-will-change/Overview.bs"},
+ "http://dev.w3.org/csswg/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/csswg","file":"Overview.src.html"},
  "http://dev.w3.org/" : {"vcs":"cvs","server":"dev.w3.org","root":"/sources/public"},
  "http://dvcs.w3.org/hg": {"vcs":"hg","server":"https://dvcs.w3.org/hg"},
  "https://dvcs.w3.org/hg": {"vcs":"hg","server":"https://dvcs.w3.org/hg"},
@@ -24,6 +26,6 @@
  "http://tabatkins.github.io/specs/respimg/Overview.html":{"vcs":"git","clone":"https://github.com/tabatkins/specs","path":"respimg/Overview.html","branch":"gh-pages"},
  "http://w3c.github.io/nfc/proposals/common/nfc.html":{"vcs":"git","clone":"https://github.com/w3c/nfc","path":"proposals/common/nfc.html","branch":"gh-pages"},
  "http://webaudio.github.io/web-audio-api/":{"vcs":"git","clone":"https://github.com/WebAudio/web-audio-api","path":"index.html","branch":"gh-pages"},
- "http://w3c.github.io/webappsec/specs/subresourceintegrity/":{"vcs":"git","clone":"https://github.com/w3c/webappsec.git","path":"specs/subresourceintegrity/spec.markdown","branch":"gh-pages"}
+ "http://w3c.github.io/webappsec/specs/subresourceintegrity/":{"vcs":"git","clone":"https://github.com/w3c/webappsec","path":"specs/subresourceintegrity/spec.markdown","branch":"gh-pages"}
 
 }
