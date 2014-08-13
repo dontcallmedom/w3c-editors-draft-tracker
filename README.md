@@ -10,7 +10,7 @@ Examples:
 python getEdDraftActivity.py --map map-url-to-vcs.json --list editor-drafts /tmp
 
 # fetch data for CSS Background editors draft
-python getEdDraftActivity.py --map map-url-to-vcs.json --url https://dvcs.w3.org/hg/csswg /tmp
+python getEdDraftActivity.py --map map-url-to-vcs.json --url http://dev.w3.org/csswg/css3-background/ /tmp
 
 The XML files can be turned into SVG representation of the activity using the XSLT style sheet build-spec-activity.xsl:
 ```bash
