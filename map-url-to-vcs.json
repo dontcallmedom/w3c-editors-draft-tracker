@@ -1,7 +1,7 @@
 {
  "http://dev.w3.org/fxtf/web-animations/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/FXTF","path":"web-animations/index.html"},
  "http://dev.w3.org/2011/webrtc/editor/": {"vcs":"git","clone":"https://github.com/fluffy/webrtc-w3c"},
- "http://dev.w3.org/csswg/mediaqueries4/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/csswg","path":"mediaqueries/Overview.src.html"},
+ "http://dev.w3.org/csswg/mediaqueries4/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/csswg","path":"mediaqueries/Overview.bs"},
  "http://dev.w3.org/csswg/css-font-loading/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/csswg","path":"css-font-loading/Overview.bs"},
  "http://dev.w3.org/csswg/css-will-change/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/csswg","path":"css-will-change/Overview.bs"},
  "http://dev.w3.org/csswg/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/csswg","file":"Overview.src.html"},
@@ -19,7 +19,7 @@
 
  "http://www.w3.org/2012/webcrypto/WebCryptoAPI/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/webcrypto-api","path":"spec/Overview-WebCryptoAPI.xml"},
  "http://www.w3.org/2012/sysapps":{"vcs":"git","server":"https://github.com/sysapps","file":"index.html","branch":"gh-pages"},
- "https://github.com/slightlyoff/ServiceWorker/blob/master/spec/service_worker/index.html":{"vcs":"git","clone":"https://github.com/slightlyoff/ServiceWorker","branch":"master","path":"service_worker.ts"},
+ "https://github.com/slightlyoff/ServiceWorker/blob/master/spec/service_worker/index.html":{"vcs":"git","clone":"https://github.com/slightlyoff/ServiceWorker","branch":"gh-pages","path":"spec/service_worker/index.html"},
  "http://w3c.github.io/filesystem-api/Overview.html":{"vcs":"git","clone":"https://github.com/w3c/filesystem-api","branch":"gh-pages","path":"Overview.html"},
  "http://w3c.github.io/deviceorientation/spec-source-orientation.html":{"vcs":"git","clone":"https://github.com/w3c/deviceorientation","branch":"gh-pages","path":"spec-source-orientation.html"},
  "http://www.w3.org/2008/webapps/manifest/":{"vcs":"git","clone":"https://github.com/w3c/manifest","path":"index.html","branch":"gh-pages"},
@@ -29,5 +29,8 @@
  "http://w3c.github.io/webappsec/specs/subresourceintegrity/":{"vcs":"git","clone":"https://github.com/w3c/webappsec","path":"specs/subresourceintegrity/spec.markdown","branch":"gh-pages"},
  "http://www.w3.org/Fonts/WG/WOFF2/" : {"vcs":"cvs","server":"dev.w3.org","root":"/sources/public","path":"webfonts/WOFF2/spec/Overview.html"},
  "http://w3c.github.io/wake-lock/":{"vcs":"git","clone":"https://github.com/w3c/wake-lock","path":"index.html","branch":"gh-pages"},
- "http://w3c.github.io/push-api/":{"vcs":"git","clone":"https://github.com/w3c/push-api","path":"index.html","branch":"gh-pages"}
+ "http://w3c.github.io/push-api/":{"vcs":"git","clone":"https://github.com/w3c/push-api","path":"index.html","branch":"gh-pages"},
+"https://github.com/slightlyoff/BackgroundSync/blob/master/explainer.md":{"vcs":"git","clone":"https://github.com/slightlyoff/BackgroundSync","path":"explainer.md","branch":"master"},
+"https://github.com/namedwebsockets/namedwebsockets":{"vcs":"git","clone":"https://github.com/namedwebsockets/namedwebsockets.git","path":"README.md","branch":"master"},
+"https://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview.html,":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/web-intents","path":"spec/Overview.html"}
 }
