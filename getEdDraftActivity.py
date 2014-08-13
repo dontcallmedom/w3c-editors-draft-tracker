@@ -7,6 +7,7 @@ import subprocess
 import os
 import sys
 import re
+from collections import OrderedDict
 
 def writable_dir(string):
     if not os.path.isdir(string):
@@ -49,6 +50,8 @@ else:
     urisFile = [args.filter]
 vcsData = args.map
 checkout_dir = args.path
+
+vcsData = OrderedDict(sorted(vcsData.iteritems(), key=lambda x: -len(x[0])))
 
 # from http://stackoverflow.com/questions/431684/how-do-i-cd-in-python
 class cd:
