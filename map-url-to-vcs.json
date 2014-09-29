@@ -15,11 +15,12 @@
  "http://www.w3.org/html/wg/drafts/html/master/":{"vcs":"git","clone":"https://github.com/w3c/html","branch":"master","path":"source"},
  "http://www.w3.org/html/wg/drafts/html/CR/":{"vcs":"git","clone":"https://github.com/w3c/html","branch":"CR","path":"source"},
  "http://www.w3.org/html/wg/drafts/2dcontext/html5_canvas/":{"vcs":"git","clone":"https://github.com/w3c/html","branch":"html5_canvas","path":"source"},
+ "http://www.w3.org/html/wg/drafts/2dcontext/html5_canvas_CR/":{"vcs":"git","clone":"https://github.com/w3c/html","branch":"html5_canvas_CR","path":"source"},
  "http://www.w3.org/html/wg/drafts/srcset/w3c-srcset/":{"vcs":"git","clone":"https://github.com/w3c/html","branch":"w3c-srcset","path":"source"},
 
  "http://www.w3.org/2012/webcrypto/WebCryptoAPI/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/webcrypto-api","path":"spec/Overview-WebCryptoAPI.xml"},
  "http://www.w3.org/2012/sysapps":{"vcs":"git","server":"https://github.com/sysapps","file":"index.html","branch":"gh-pages"},
- "https://github.com/slightlyoff/ServiceWorker/blob/master/spec/service_worker/index.html":{"vcs":"git","clone":"https://github.com/slightlyoff/ServiceWorker","branch":"gh-pages","path":"spec/service_worker/index.html"},
+ "https://slightlyoff.github.io/ServiceWorker/spec/service_worker/":{"vcs":"git","clone":"https://github.com/slightlyoff/ServiceWorker","branch":"gh-pages","path":"spec/service_worker/index.html"},
  "http://w3c.github.io/filesystem-api/Overview.html":{"vcs":"git","clone":"https://github.com/w3c/filesystem-api","branch":"gh-pages","path":"Overview.html"},
  "http://w3c.github.io/deviceorientation/spec-source-orientation.html":{"vcs":"git","clone":"https://github.com/w3c/deviceorientation","branch":"gh-pages","path":"spec-source-orientation.html"},
  "http://www.w3.org/2008/webapps/manifest/":{"vcs":"git","clone":"https://github.com/w3c/manifest","path":"index.html","branch":"gh-pages"},
@@ -31,6 +32,7 @@
  "http://w3c.github.io/wake-lock/":{"vcs":"git","clone":"https://github.com/w3c/wake-lock","path":"index.html","branch":"gh-pages"},
  "http://w3c.github.io/push-api/":{"vcs":"git","clone":"https://github.com/w3c/push-api","path":"index.html","branch":"gh-pages"},
 "https://github.com/slightlyoff/BackgroundSync/blob/master/explainer.md":{"vcs":"git","clone":"https://github.com/slightlyoff/BackgroundSync","path":"explainer.md","branch":"master"},
-"https://github.com/namedwebsockets/namedwebsockets":{"vcs":"git","clone":"https://github.com/namedwebsockets/namedwebsockets.git","path":"README.md","branch":"master"},
-"https://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview.html,":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/web-intents","path":"spec/Overview.html"}
+"https://github.com/namedwebsockets/namedwebsockets":{"vcs":"git","clone":"https://github.com/namedwebsockets/namedwebsockets","path":"README.md","branch":"master"},
+"https://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview.html":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/web-intents","path":"spec/Overview.html"},
+"http://w3c.github.io/ambient-light/":{"vcs":"git", "clone":"https://github.com/w3c/ambient-light.git", "path":"index.src.html","branch:gh-pages"}
 }
