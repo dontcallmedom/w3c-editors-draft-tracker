@@ -71,7 +71,7 @@ uri_cleaner = re.compile(r"[^a-z0-9]")
 for l in urisFile:
     found = False
     uri = l.strip()
-    name = uri_cleaner.sub("", "".join(uri.split(":")[1:]))
+    name = uri_cleaner.sub("", "".join(uri.split(":")[1:]).split("#")[0])
     res = open("data/%s.xml" % name,"w")
     for uriprefix,rule in vcsData.iteritems():
         if uri.startswith(uriprefix):
