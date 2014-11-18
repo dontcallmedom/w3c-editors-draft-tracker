@@ -47,6 +47,7 @@
 "http://w3c.github.io/animation-timing/":{"vcs":"git", "clone":"https://github.com/w3c/animation-timing", "path":"index.html","branch":"gh-pages"},
 "http://w3c.github.io/beacon/":{"vcs":"git", "clone":"https://github.com/w3c/beacon", "path":"index.html","branch":"gh-pages"},
 "http://w3c.github.io/resource-timing/1":{"vcs":"git", "clone":"https://github.com/w3c/resource-timing", "path":"1.html","branch":"gh-pages"},
-"http://w3c.github.io/encrypted-media/":{"vcs":"git", "clone":"https://github.com/w3c/encrypted-media", "path":"index.html","branch":"gh-pages"}
+"http://w3c.github.io/encrypted-media/":{"vcs":"git", "clone":"https://github.com/w3c/encrypted-media", "path":"index.html","branch":"gh-pages"},
+"https://webbluetoothcg.github.io/web-bluetooth/":{"vcs":"git", "clone":"https://github.com/webbluetoothcg/web-bluetooth", "path":"index.html","branch":"gh-pages"}
 
 }
