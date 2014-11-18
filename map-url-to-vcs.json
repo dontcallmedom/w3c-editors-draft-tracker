@@ -10,7 +10,7 @@
  "http://dvcs.w3.org/hg": {"vcs":"hg","server":"https://dvcs.w3.org/hg"},
  "https://dvcs.w3.org/hg": {"vcs":"hg","server":"https://dvcs.w3.org/hg"},
  "http://picture.responsiveimages.org": {"vcs":"git","clone":"https://github.com/ResponsiveImagesCG/picture-element","path":"index.html","branch":"gh-pages"},
- "https://svgwg.org/svg2-draft/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/svg2","path":"master"},
+ "https://svgwg.org/svg2-draft/":{"vcs":"git","clone":"https://github.com/w3c/svgwg", "branch":"master","path":"master/"},
  "http://w3c-test.org":{"vcs":"hg","server":"https://dvcs.w3.org/hg"},
  "http://www.w3c-test.org":{"vcs":"hg","server":"https://dvcs.w3.org/hg"},
  "http://www.w3.org/html/wg/drafts/html/master/":{"vcs":"git","clone":"https://github.com/w3c/html","branch":"master","path":"source"},
