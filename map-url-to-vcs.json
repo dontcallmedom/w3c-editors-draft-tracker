@@ -24,6 +24,8 @@
 
  "http://www.w3.org/2012/webcrypto/WebCryptoAPI/":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/webcrypto-api","path":"spec/Overview-WebCryptoAPI.xml"},
  "http://www.w3.org/2012/sysapps":{"vcs":"git","server":"https://github.com/sysapps","file":"index.html","branch":"gh-pages"},
+ "http://w3c.github.io":{"vcs":"git","server":"https://github.com/w3c","file":"index.html","branch":"gh-pages"},
+ "https://w3c.github.io":{"vcs":"git","server":"https://github.com/w3c","file":"index.html","branch":"gh-pages"},
  "https://slightlyoff.github.io/ServiceWorker/spec/service_worker/":{"vcs":"git","clone":"https://github.com/slightlyoff/ServiceWorker","branch":"gh-pages","path":"spec/service_worker/index.html"},
  "http://w3c.github.io/filesystem-api/Overview.html":{"vcs":"git","clone":"https://github.com/w3c/filesystem-api","branch":"gh-pages","path":"Overview.html"},
  "http://w3c.github.io/deviceorientation/spec-source-orientation.html":{"vcs":"git","clone":"https://github.com/w3c/deviceorientation","branch":"gh-pages","path":"spec-source-orientation.html"},
@@ -33,21 +35,11 @@
  "http://webaudio.github.io/web-audio-api/":{"vcs":"git","clone":"https://github.com/WebAudio/web-audio-api","path":"index.html","branch":"gh-pages"},
  "http://w3c.github.io/webappsec/specs/subresourceintegrity/":{"vcs":"git","clone":"https://github.com/w3c/webappsec","path":"specs/subresourceintegrity/spec.markdown","branch":"gh-pages"},
  "http://www.w3.org/Fonts/WG/WOFF2/" : {"vcs":"cvs","server":"dev.w3.org","root":"/sources/public","path":"webfonts/WOFF2/spec/Overview.html"},
- "http://w3c.github.io/wake-lock/":{"vcs":"git","clone":"https://github.com/w3c/wake-lock","path":"index.html","branch":"gh-pages"},
- "http://w3c.github.io/push-api/":{"vcs":"git","clone":"https://github.com/w3c/push-api","path":"index.html","branch":"gh-pages"},
 "https://github.com/slightlyoff/BackgroundSync/blob/master/explainer.md":{"vcs":"git","clone":"https://github.com/slightlyoff/BackgroundSync","path":"explainer.md","branch":"master"},
 "https://github.com/namedwebsockets/namedwebsockets":{"vcs":"git","clone":"https://github.com/namedwebsockets/namedwebsockets","path":"README.md","branch":"master"},
 "https://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview.html":{"vcs":"hg","clone":"https://dvcs.w3.org/hg/web-intents","path":"spec/Overview.html"},
 "http://w3c.github.io/ambient-light/":{"vcs":"git", "clone":"https://github.com/w3c/ambient-light", "path":"index.src.html","branch":"gh-pages"},
-"http://w3c.github.io/resource-hints/":{"vcs":"git", "clone":"https://github.com/w3c/resource-hints", "path":"index.html","branch":"gh-pages"},
 "http://w3c.github.io/presentation-api/":{"vcs":"git", "clone":"https://github.com/w3c/presentation-api", "path":"Overview.src.html","branch":"gh-pages"},
-"http://w3c.github.io/permissions/":{"vcs":"git", "clone":"https://github.com/w3c/permissions", "path":"index.html","branch":"gh-pages"},
-"http://w3c.github.io/screen-orientation/":{"vcs":"git", "clone":"https://github.com/w3c/screen-orientation", "path":"index.html","branch":"gh-pages"},
-"http://w3c.github.io/netinfo/":{"vcs":"git", "clone":"https://github.com/w3c/netinfo", "path":"index.html","branch":"gh-pages"},
-"http://w3c.github.io/animation-timing/":{"vcs":"git", "clone":"https://github.com/w3c/animation-timing", "path":"index.html","branch":"gh-pages"},
-"http://w3c.github.io/beacon/":{"vcs":"git", "clone":"https://github.com/w3c/beacon", "path":"index.html","branch":"gh-pages"},
 "http://w3c.github.io/resource-timing/1":{"vcs":"git", "clone":"https://github.com/w3c/resource-timing", "path":"1.html","branch":"gh-pages"},
-"http://w3c.github.io/encrypted-media/":{"vcs":"git", "clone":"https://github.com/w3c/encrypted-media", "path":"index.html","branch":"gh-pages"},
 "https://webbluetoothcg.github.io/web-bluetooth/":{"vcs":"git", "clone":"https://github.com/webbluetoothcg/web-bluetooth", "path":"index.html","branch":"gh-pages"}
-
 }
