@@ -41,5 +41,6 @@
 "http://w3c.github.io/ambient-light/":{"vcs":"git", "clone":"https://github.com/w3c/ambient-light", "path":"index.src.html","branch":"gh-pages"},
 "http://w3c.github.io/presentation-api/":{"vcs":"git", "clone":"https://github.com/w3c/presentation-api", "path":"Overview.src.html","branch":"gh-pages"},
 "http://w3c.github.io/resource-timing/1":{"vcs":"git", "clone":"https://github.com/w3c/resource-timing", "path":"1.html","branch":"gh-pages"},
-"https://webbluetoothcg.github.io/web-bluetooth/":{"vcs":"git", "clone":"https://github.com/webbluetoothcg/web-bluetooth", "path":"index.html","branch":"gh-pages"}
+"https://webbluetoothcg.github.io/web-bluetooth/":{"vcs":"git", "clone":"https://github.com/webbluetoothcg/web-bluetooth", "path":"index.html","branch":"gh-pages"},
+"http://w3ctag.github.io/packaging-on-the-web/":{"vcs":"git", "clone":"https://github.com/w3ctag/packaging-on-the-web", "path":"index.html","branch":"gh-pages"}
 }
