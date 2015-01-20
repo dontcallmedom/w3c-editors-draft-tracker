@@ -7,7 +7,12 @@ import subprocess
 import os
 import sys
 import re
-from collections import OrderedDict
+try:
+    from collections import OrderedDict
+except Exception, e:
+    # python < 2.7 doesn't have OrderedDict
+    # pip install ordereddict solves this
+    from ordereddict import OrderedDict
 
 def writable_dir(string):
     if not os.path.isdir(string):
