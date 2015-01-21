@@ -70,7 +70,10 @@ def get_gh_data(cloneurl, datatype):
     return fetch_gh_data(url)
 
 def fetch_gh_data(url):
-    r = requests.get(url, params={"per_page":100})
+    headers = {}
+    if os.environ.has_key("GH_OAUTH_TOKEN"):
+        headers['Authorization'] = "token %s" % os.environ["GH_OAUTH_TOKEN"]
+    r = requests.get(url, headers=headers, params={"per_page":100})
     try:
         data = r.json()
     except:
