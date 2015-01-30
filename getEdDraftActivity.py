@@ -119,7 +119,7 @@ def print_hg_log(uri, rule, res, checkout_dir):
         path = path[len(repo) + 1:]
     print "Cloning repo %s from %s for %s" % (repo, cloneurl, path)
     if cloneurl == None:
-        raise LookupError("No git clone URL for %s" % uri)
+        raise LookupError("No hg clone URL for %s" % uri)
 
     dir_name = checkout_dir + "/" + cloneurl.split("/")[2] + "/"
     if not os.path.isdir(dir_name):
@@ -162,6 +162,7 @@ def print_git_log(uri, rule, res, checkout_dir, ghissues):
     if ghissues and cloneurl.startswith("https://github.com"):
         gh_data = report_gh_issues(cloneurl)
     res.write("<log>")
+    res.write("<repo>%s</repo>" % cloneurl)
     if gh_data:
         res.write("<issues><open>%d</open><all>%d</all></issues>" % (gh_data["issues"]["open"], gh_data["issues"]["all"]))
         res.write("<pullrequests>%d</pullrequests>" % (gh_data["pullrequests"]))
@@ -205,15 +206,16 @@ def process_uris(args):
         for uriprefix,rule in vcsData.iteritems():
             if uri.startswith(uriprefix):
                 found = True
-                if not rule.has_key("path"):
-                    rule["path"] = uri.replace(uriprefix,"").split("#")[0]
+                r = dict.copy(rule)
+                if not r.has_key("path"):
+                    r["path"] = uri.replace(uriprefix,"").split("#")[0]
 
                 if rule["vcs"]=="cvs":
-                    print_cvs_log(uri, rule, res, checkout_dir)
+                    print_cvs_log(uri, r, res, checkout_dir)
                 elif rule["vcs"]=="hg":
-                    print_hg_log(uri, rule, res, checkout_dir)
+                    print_hg_log(uri, r, res, checkout_dir)
                 elif rule["vcs"]=="git":
-                    print_git_log(uri, rule, res, checkout_dir, args.ghissues)
+                    print_git_log(uri, r, res, checkout_dir, args.ghissues)
             if found:
                 break
         if not found:
