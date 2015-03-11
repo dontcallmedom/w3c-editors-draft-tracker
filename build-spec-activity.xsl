@@ -1,5 +1,5 @@
 <xsl:stylesheet version="2.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:html="http://www.w3.org/1999/xhtml" exclude-result-prefixes="html svg xs" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:html="http://www.w3.org/1999/xhtml" exclude-result-prefixes="html svg xs" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink"> 
 
 <!-- Output method XML -->
 <xsl:output method="xml" indent="yes"/>
@@ -44,19 +44,19 @@
       <text
           x="6.9628906"
           y="{$height + 36}"
-          style="text-anchor:start">Open Issues</text>
+          style="text-anchor:start"><a xlink:href="{/log/issues/open/@href}">Open Issues</a></text>
       <text
           x="6.9628906"
           y="{$height + 48}"
-          style="text-anchor:start">Pull requests</text>
+          style="text-anchor:start"><a xlink:href="{/log/pullrequests/@href}">Pull requests</a></text>
       <text
           x="112.83087"
           y="{$height + 36}"
-          style="text-anchor:end"><xsl:value-of select="/log/issues/open"/>/<xsl:value-of select="/log/issues/all"/></text>
+          style="text-anchor:end"><a xlink:href="{/log/issues/open/@href}"><xsl:value-of select="/log/issues/open"/></a>/<xsl:value-of select="/log/issues/all"/></text>
       <text
           x="112.23766"
           y="{$height + 48}"
-          style="text-anchor:end"><xsl:value-of select="/log/pullrequests"/></text>
+          style="text-anchor:end"><a xlink:href="{/log/pullrequests/@href}"><xsl:value-of select="/log/pullrequests"/></a></text>
     </xsl:if>
   </svg>
 </xsl:template>
