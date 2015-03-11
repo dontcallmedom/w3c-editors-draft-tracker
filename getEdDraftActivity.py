@@ -172,7 +172,7 @@ def print_git_log(uri, rule, res, checkout_dir, ghissues):
         if not os.path.isdir(dir_name + repo):
             subprocess.call(["git","clone",cloneurl])
         with cd(dir_name + repo):
-            subprocess.call(["git","fetch","origin",branch])
+            subprocess.call(["git","fetch","origin"])
             subprocess.call(["git","log","--pretty=format:<logentry><date>%ci</date></logentry>","origin/%s" % branch,path], stdout=res)
         res.write("</log>")
 
