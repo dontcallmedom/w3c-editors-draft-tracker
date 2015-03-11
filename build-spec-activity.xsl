@@ -20,6 +20,7 @@
     <style type="text/css">text { font-size:10px; text-anchor:middle;}
     line { stroke: #AAF; stroke-width:5px; }
     text.past { fill:#FFF;}
+    a:link { color: #00F; text-decoration: underline;}
     </style>
     <title>Editing activity for <xsl:value-of select="$spec-title"/></title>
     <xsl:variable name="lastupdatemonth" select="number(substring(xs:string(/log/logentry[1]/date),6,2))"/>
