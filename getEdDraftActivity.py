@@ -164,8 +164,8 @@ def print_git_log(uri, rule, res, checkout_dir, ghissues):
     res.write("<log>")
     res.write("<repo>%s</repo>" % cloneurl)
     if gh_data:
-        res.write("<issues><open href='%s'>%d</open><all>%d</all></issues>" % (clone_url + '/issues', gh_data["issues"]["open"], gh_data["issues"]["all"]))
-        res.write("<pullrequests href='%s'>%d</pullrequests>" % (clone_url + '/pulls', gh_data["pullrequests"]))
+        res.write("<issues><open href='%s'>%d</open><all>%d</all></issues>" % (cloneurl + '/issues', gh_data["issues"]["open"], gh_data["issues"]["all"]))
+        res.write("<pullrequests href='%s'>%d</pullrequests>" % (cloneurl + '/pulls', gh_data["pullrequests"]))
     res.flush()
     with cd(dir_name):
         # clone if dir not exist, pull otherwise
