@@ -46,19 +46,19 @@
       <text
           x="6.9628906"
           y="{$height + 36}"
-          style="text-anchor:start"><a xlink:href="{/log/issues/open/@href}">Open Issues</a></text>
+          style="text-anchor:start"><a xlink:target="_parent" xlink:href="{/log/issues/open/@href}">Open Issues</a></text>
       <text
           x="6.9628906"
           y="{$height + 48}"
-          style="text-anchor:start"><a xlink:href="{/log/pullrequests/@href}">Pull requests</a></text>
+          style="text-anchor:start"><a xlink:target="_parent" xlink:href="{/log/pullrequests/@href}">Pull requests</a></text>
       <text
           x="112.83087"
           y="{$height + 36}"
-          style="text-anchor:end"><a xlink:href="{/log/issues/open/@href}"><xsl:value-of select="/log/issues/open"/></a>/<xsl:value-of select="/log/issues/all"/></text>
+          style="text-anchor:end"><a xlink:target="_parent" xlink:href="{/log/issues/open/@href}"><xsl:value-of select="/log/issues/open"/></a>/<xsl:value-of select="/log/issues/all"/></text>
       <text
           x="112.23766"
           y="{$height + 48}"
-          style="text-anchor:end"><a xlink:href="{/log/pullrequests/@href}"><xsl:value-of select="/log/pullrequests"/></a></text>
+          style="text-anchor:end"><a xlink:target="_parent" xlink:href="{/log/pullrequests/@href}"><xsl:value-of select="/log/pullrequests"/></a></text>
     </xsl:if>
   </svg>
 </xsl:template>
