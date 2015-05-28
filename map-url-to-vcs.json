@@ -42,5 +42,6 @@
  "http://dvcs.w3.org/hg": {"vcs":"hg","server":"https://dvcs.w3.org/hg"},
  "https://dvcs.w3.org/hg": {"vcs":"hg","server":"https://dvcs.w3.org/hg"},
  "http://w3c.github.io":{"vcs":"git","server":"https://github.com/w3c","file":"index.html","branch":"gh-pages"},
- "https://w3c.github.io":{"vcs":"git","server":"https://github.com/w3c","file":"index.html","branch":"gh-pages"}
+    "https://w3c.github.io":{"vcs":"git","server":"https://github.com/w3c","file":"index.html","branch":"gh-pages"},
+    "https://mediasession.spec.whatwg.org/": {"vcs": "git", "clone":"https://github.com/whatwg/mediasession", "path":"mediasession.html","branch":"master"}
 }
