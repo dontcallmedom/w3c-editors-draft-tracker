@@ -39,6 +39,8 @@
 "http://w3c.github.io/presentation-api/":{"vcs":"git", "clone":"https://github.com/w3c/presentation-api", "path":"Overview.src.html","branch":"gh-pages"},
 "https://webbluetoothcg.github.io/web-bluetooth/":{"vcs":"git", "clone":"https://github.com/webbluetoothcg/web-bluetooth", "path":"index.html","branch":"gh-pages"},
 "http://w3ctag.github.io/packaging-on-the-web/":{"vcs":"git", "clone":"https://github.com/w3ctag/packaging-on-the-web", "path":"index.html","branch":"gh-pages"},
+"http://cwiiis.github.io/gaia-navigator/": {"vcs":"git","clone":"https://github.com/Cwiiis/gaia-navigator", "path":"index.html","branch":"gh-pages"},
+"http://rbyers.github.io/InputDevice/":{"vcs":"git","clone":"https://github.com/RByers/InputDevice/","branch":"gh-pages","path":"index.html"},
   "http://dev.w3.org/" : {"vcs":"cvs","server":"dev.w3.org","root":"/sources/public"},
  "http://dvcs.w3.org/hg": {"vcs":"hg","server":"https://dvcs.w3.org/hg"},
  "https://dvcs.w3.org/hg": {"vcs":"hg","server":"https://dvcs.w3.org/hg"},
