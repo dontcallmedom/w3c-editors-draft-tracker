@@ -1,11 +1,11 @@
 <xsl:stylesheet version="2.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:html="http://www.w3.org/1999/xhtml" exclude-result-prefixes="html svg xs" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:html="http://www.w3.org/1999/xhtml" exclude-result-prefixes="html svg xs" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink">
 
 <!-- Output method XML -->
 <xsl:output method="xml" indent="yes"/>
 <xsl:param name="end-month" select="current-date()"/>
 <xsl:param name="start-month" select="$end-month - xs:yearMonthDuration('P0Y11M')"/>
-<xsl:variable name="months" select="for $i in 0 to months-from-duration((($end-month - $start-month) div xs:dayTimeDuration('P1D')) idiv 30 
+<xsl:variable name="months" select="for $i in 0 to months-from-duration((($end-month - $start-month) div xs:dayTimeDuration('P1D')) idiv 30
    * xs:yearMonthDuration('P0Y1M') ) return ($start-month + $i * xs:yearMonthDuration('P0Y1M'))"/>
 <xsl:param name="spec-title"/>
 
@@ -13,6 +13,7 @@
 
 <xsl:template match="/">
   <xsl:variable name="commits" select="log"/>
+  <xsl:variable name="total" select="sum(for $i in $months return count($commits//logentry[starts-with(date, substring(xs:string($i),1,7))]))"/>
   <xsl:variable name="max" select="max(for $i in $months return count($commits//logentry[starts-with(date, substring(xs:string($i),1,7))]))"/>
   <xsl:variable name="height" select="max(($max,20)) + 20"/>
   <xsl:variable name="lastYearMonths" select="count(for $i in $months return if (year-from-date($i) &lt; year-from-date($end-month)) then $i else nil)"/>
@@ -25,7 +26,7 @@
     </style>
     <title>Editing activity for <xsl:value-of select="$spec-title"/></title>
     <xsl:variable name="lastupdatemonth" select="number(substring(xs:string(/log/logentry[1]/date),6,2))"/>
-    <desc>Last updated <xsl:value-of select="$monthNames[$lastupdatemonth]"/><xsl:text> </xsl:text><xsl:value-of select="substring(/log/logentry[1]/date/text(),1,4)"/></desc>
+    <desc title="{$total} commits since {$start-month}">Last updated <xsl:value-of select="$monthNames[$lastupdatemonth]"/><xsl:text> </xsl:text><xsl:value-of select="substring(/log/logentry[1]/date/text(),1,4)"/></desc>
     <rect x="0" y="{$height - 9}" width="{10*$lastYearMonths + 1}" height="25" fill="#999"/>
     <xsl:for-each select="$months">
       <xsl:variable name="month" select="$monthNames[month-from-date(current())]"/>
